@@ -1,0 +1,30 @@
+<div class="orderlist">
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
+	<div class="table-responsive addedList">
+		<table class="table table-condensed">
+			<thead>
+				<tr class="active">
+					<th>Item</th>
+					<th>Qty</th>
+					<th>Price</th>
+					<th>Remove</th>
+				</tr>
+			</thead>
+			<tr class="active" ng-repeat="item in cartItemList.cartItem">
+				<th><span><img ng-src="{{item.imageUrl}}"></span></th>
+				<th><p>{{item.qty}}<p></th>
+				<th><p>${{item.qty * item.ourprice}}<p></th>
+				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem(index)" style="cursor:pointer"></i></th>
+			</tr>
+			<tr class="active">
+				<th>Total</th>
+				<th>{{totalQty}}</th>
+				<th>${{totalPrice}}</th>
+				<th></th>
+			</tr>
+		</table>
+	</div>
+	<button class="btn btn-info" ui-sref="displayProducts({username:username})"><span class="glyphicon glyphicon-chevron-left"></span> Buy More</button>
+	<button class="btn btn-danger" ng-click="clearCart()"><span class="glyphicon glyphicon-trash"></span> Clear Cart</button>
+	<button class="btn btn-warning" ui-sref="checkout({username:username})"><span class="glyphicon glyphicon-ok"></span> Checkout</button>
+</div>

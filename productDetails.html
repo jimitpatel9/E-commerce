@@ -1,0 +1,64 @@
+<header class="header">
+	<nav class="navbar navbar-default" role="navigation">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	        <!-- your branding here -->
+	        <img ng-src="images/logo.jpg" ui-sref="home.login" class="logo"><span>E-Shop</span>
+	        <div class="clear"></div>
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" ng-class="{'in':!navbarCollapsed}">
+	      <!-- your normal collapsable content here -->
+	      <ul class="nav navbar-nav">
+	      	<li>
+	      		<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">Today's Deal</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">Gift Card</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/" data-toggle="collapse" data-target=".navbar-collapse">Home</a>
+	      	</li>
+	      </ul>
+	    </div>
+	</nav>	
+</header>
+<div class="productDetails">
+	<div class="panel panel-primary">
+	  <div class="panel-heading">
+	  	<span>Product :- {{product.name}}</span>
+	  	<button class="btn btn-primary" ui-sref="displayProducts({username:user})"><span class="glyphicon glyphicon-chevron-left"></span> Back</button>
+	  </div>
+	  <div class="panel-body">
+	  	<span>
+	  		<img ng-src="{{product.imageUrl}}" style="width:100%;height:360px;80%;">
+	  	</span>
+	  	<div class="table-responsive">
+				<table class="table">
+					<tr>
+						<th>Org Price : </th>
+						<th><s> ${{product.orignalprice}}</s></th>
+					</tr>
+					<tr>
+						<th>Our Price : </th>
+						<th>${{product.ourprice}}</th>
+					</tr>
+					<tr>
+						<th>Ratings :</th>
+						<th><rating ng-model="product.rate" max="max" readonly="isReadonly"></rating></th>
+					</tr>
+					
+				</table>
+			</div>
+	  </div>
+	</div>
+</div>

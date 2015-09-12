@@ -1,0 +1,171 @@
+/*Mixins*/
+/*End Mixins*/
+/*Variables*/
+/*End Variables*/
+/*General Classess*/
+.clear {
+  clear: both; }
+
+/*End General Classess*/
+body {
+  background-color: #0B0B48;
+  width: 450px;
+  margin: 0 auto; }
+
+/*Login Page CSS*/
+.login p {
+  text-align: center; }
+  .login p input[type=text], .login p input[type=password], .login p input {
+    padding-left: 10px;
+    color: black;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px; }
+.login .loginSignup {
+  text-align: center; }
+  .login .loginSignup button {
+    width: 100px;
+    margin-left: 10px; }
+.login .ng-scope {
+  display: block;
+  text-align: center; }
+
+nav {
+  border: none !important; }
+  nav .navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center; }
+    nav .navbar-brand .logo {
+      display: inline-block;
+      margin: 0; }
+    nav .navbar-brand span {
+      display: inline-block;
+      margin: 0;
+      color: white; }
+  nav .navbar-header {
+    background-color: #0B0B48;
+    border: none; }
+  nav .navbar-collapse {
+    background-color: #0B0B48;
+    border: none;
+    text-align: right; }
+    nav .navbar-collapse a {
+      color: white !important; }
+
+.logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px auto; }
+  .logo img {
+    width: 50px; }
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent !important; }
+
+.navbar-default .navbar-toggle {
+  border-color: transparent !important; }
+
+.header {
+  color: white; }
+  .header p {
+    margin-left: 30px; }
+  .header .glyphicon-shopping-cart {
+    font-size: 30px;
+    float: right;
+    display: block;
+    position: relative;
+    top: 10%; }
+    .header .glyphicon-shopping-cart span {
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 14px;
+      font-size: 14px;
+      color: black; }
+  .header .headerIcon {
+    margin: 10px; }
+    .header .headerIcon h3 {
+      display: block;
+      float: left;
+      margin: 0px; }
+
+.glyphicon-star {
+  color: yellow; }
+
+.itemList {
+  display: block;
+  width: 100%;
+  padding: 0px;
+  height: auto; }
+  .itemList li {
+    display: block;
+    float: left;
+    width: 200px;
+    color: white;
+    padding: 5px;
+    margin-top: 30px;
+    text-align: center;
+    text-align: center; }
+    .itemList li img {
+      width: 100%;
+      height: 150px; }
+    .itemList li input[type=number] {
+      color: black;
+      width: 50px;
+      padding: 0px 5px; }
+  .itemList li:nth-child(2n+2) {
+    margin-left: 7px; }
+
+.table-responsive {
+  border: none; }
+  .table-responsive th {
+    border: none !important; }
+
+.form-control {
+  border-radius: 20px; }
+
+.productDetails .panel-primary {
+  border-color: white !important; }
+  .productDetails .panel-primary .panel-heading {
+    background-color: #0B0B48 !important; }
+    .productDetails .panel-primary .panel-heading span {
+      font-weight: bold;
+      font-size: 14px; }
+    .productDetails .panel-primary .panel-heading button {
+      float: right;
+      position: relative;
+      right: -5px;
+      top: -7px;
+      background-color: #0B0B48;
+      border-color: #0B0B48; }
+  .productDetails .panel-primary .panel-body img {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px; }
+
+.orderlist th {
+  width: 33%;
+  height: 100%;
+  text-align: center; }
+  .orderlist th span {
+    margin: 0 auto;
+    display: block;
+    width: 40px; }
+    .orderlist th span img {
+      width: 100%; }
+.orderlist button {
+  width: 100%;
+  margin-top: 20px; }
+
+.checkout p {
+  color: white; }
+.checkout input {
+  width: 100% !important; }
+
+/*# sourceMappingURL=main.css.map */

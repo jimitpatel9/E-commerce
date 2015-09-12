@@ -1,0 +1,223 @@
+/*Mixins*/
+/*End Mixins*/
+/*Variables*/
+$blue-color: #0B0B48;
+/*End Variables*/
+
+/*General Classess*/
+.clear{
+	clear: both;
+}
+/*End General Classess*/
+body{
+	background-color: $blue-color;
+	width: 450px;
+	margin: 0 auto;
+}
+/*Login Page CSS*/
+.login{
+	p{
+		text-align: center;
+		input[type=text],input[type=password],input{
+			padding-left: 10px;
+			color: black;
+			width: 80%;
+			height: 40px;
+			border-radius: 5px;
+		}
+	}
+	.loginSignup{
+		text-align: center;
+		button{
+			width: 100px;
+			margin-left: 10px;
+		}	
+	}
+	.ng-scope{
+		display: block;
+		text-align: center;
+	}
+}
+//ItemList Page Header
+nav{
+	border: none !important;
+	.navbar-brand {
+	    float: left;
+	    height: 50px;
+	    padding: 0;
+	    font-size: 18px;
+	    line-height: 20px;
+	    text-align: center;
+	    .logo{
+			display: inline-block;
+			margin: 0;
+		}
+		span{
+			display: inline-block;
+			margin: 0;
+			color: white;
+		}
+	}
+	.navbar-header{
+		background-color: $blue-color;
+		border: none;
+	}
+	.navbar-collapse{
+		background-color: $blue-color; 
+		border: none;
+		text-align: right;
+		a{
+			color: white !important;
+		}
+	}
+	
+}
+.logo{
+		display: block;
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+		margin: 10px auto;
+		img{
+			width: 50px;
+		}
+	}
+//Header for itemList page
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent !important;
+
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent !important;
+}
+.header{
+	color: white;
+	p{
+		margin-left: 30px;
+	}
+	.glyphicon-shopping-cart{
+		font-size: 30px;
+		float: right;
+		display: block;
+		position: relative;
+		top:10%;
+		span{
+			display: block;
+		    position: absolute;
+		    top: 3px;
+		    left: 14px;
+		    font-size: 14px;
+		    color: black;
+		}
+
+	}
+	.headerIcon {
+		margin: 10px;
+		h3{
+			display: block;
+		    float: left;
+		    margin: 0px;
+	    }
+	}
+		
+}
+//Ends Header for itemList page
+.glyphicon-star{
+	color: yellow;
+}
+.itemList{
+	display: block;
+	width: 100%;
+	padding: 0px;
+	height: auto;
+	li{
+		display: block;
+	    float: left;
+	    width: 200px;
+	    color: white;
+	    padding: 5px;
+	    margin-top: 30px;
+	    text-align: center;
+		img{
+			width: 100%;
+			height: 150px;
+		}
+		input[type=number]{
+			color: black;
+			width: 50px;
+			padding: 0px 5px;
+		}
+		text-align:center;
+	}
+	li:nth-child(2n+2){
+		margin-left: 7px;
+	}
+}
+//Table Css
+.table-responsive{
+		border: none;
+		th{
+			border: none !important;
+		}
+	}
+.form-control{
+	border-radius: 20px;
+}
+//Product Details page
+.productDetails{
+	.panel-primary{
+			border-color: white !important;
+		.panel-heading{
+			background-color: $blue-color !important;
+
+			span{
+				font-weight: bold;
+				font-size: 14px;
+			}
+			button{
+				float: right;
+				position: relative;
+				right: -5px;
+				top: -7px;
+				background-color: $blue-color;
+				border-color: $blue-color;
+			}
+		}
+		.panel-body{
+			img{
+				display: block;
+				width: 100%;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+//Cart Page
+.orderlist{
+	th{
+		width: 33%;
+		height: 100%;
+		text-align: center;
+		span{
+			margin: 0 auto;
+			display: block;
+			width: 40px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	button{
+		width: 100%;
+		margin-top: 20px;
+	}
+}
+//Checkout page
+.checkout{
+	p{
+		color:white;
+	}
+	input{
+		width: 100% !important;
+	}
+}

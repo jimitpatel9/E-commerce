@@ -1,0 +1,18 @@
+<div class="login">
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
+	<form>
+		<p>
+			<input ng-model="username" type="text" placeholder="Username" required/>
+		</p>
+		<p>
+			<input ng-model="password" type="password" placeholder="Password" required/>
+		</p>
+		<p>
+			<input ng-model="email" type="email" placeholder="user@domain" required/>
+		</p>
+		<div class="loginSignup">
+			<button class="btn btn-info" ng-click="addUserData()">Submit</button>
+			<button class="btn btn-info" ui-sref="home.login">Cancel</button>
+		</div>
+	</form>
+</div>

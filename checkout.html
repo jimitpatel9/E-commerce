@@ -1,0 +1,36 @@
+<div class="checkout login orderlist">
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
+	<p>Be sure to click to "Ship To This Address" button</p>
+	<form class="checkoutForm" name="checkoutForm" novalidate>
+		<fieldset>
+			<p>
+				<input ng-model="username" type="text" placeholder="Username" />
+			</p>
+			<p>
+				<input ng-model="address1" type="text" placeholder="Address Line 1" />
+			</p>
+			<p>
+				<input ng-model="address2" type="text" placeholder="Address Line 2" />
+			</p>
+			<p>
+				<input ng-model="city" type="text" placeholder="Eg :- Jersey City"/>
+			</p>
+			<p>
+				<input ng-model="state" type="text" placeholder="Eg :- New Jersey"/>
+			</p>
+			<p>
+				<input ng-model="zip" type="number" placeholder="Eg :- 07306" />
+			</p>
+			<p>
+				<input ng-model="phone" type="number" placeholder="Eg :-2102232233"/>
+			</p>
+			<button class="btn btn-warning" ng-click="addUserData()"><span class="glyphicon glyphicon-shopping-cart"></span>
+				Ship to this Address
+			</button>
+			<button class="btn btn-danger" ui-sref="orderPage">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				Back to Cart
+			</button>
+		</fieldset>
+	</form>
+</div>

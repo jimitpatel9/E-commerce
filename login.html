@@ -1,0 +1,18 @@
+<div class="login">
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
+	<form>
+		<alert type="{{alert.type}}" ng-repeat="alert in alerts" close="closeAlert()" dismiss-on-timeout="1000" ng-show="error">{{alert.msg}}</alert>
+		<p>
+			<input ng-model="username" type="text" placeholder="Username" required/>
+		</p>
+		<p>
+			<input ng-model="password" type="password" placeholder="Password" required/>
+		</p>
+		<div class="loginSignup">
+			<button class="btn btn-info" ng-click="validateLogin()">Login</button>
+			<button class="btn btn-info" ng-click="signupform()" 
+					ui-sref="home.userdetail">Sign-Up
+			</button>
+		</div>
+	</form>
+</div>
