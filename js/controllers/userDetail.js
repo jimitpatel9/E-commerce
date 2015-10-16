@@ -9,11 +9,11 @@ var userDetail=function($scope,userdata,$state){
 
 //to store the data
 	userdata.save(
-		function(data){},
-		{
-			username:$scope.username,
+		{	username:$scope.username,
 			password:$scope.password,
 			email:$scope.email
+		},function(data){
+			//data saved . do something
 		}
 	);
 		if($scope.username && $scope.password && $scope.email){

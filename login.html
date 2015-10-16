@@ -1,7 +1,7 @@
 <div class="login">
-	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.png"></span>
 	<form>
-		<alert type="{{alert.type}}" ng-repeat="alert in alerts" close="closeAlert()" dismiss-on-timeout="1000" ng-show="error">{{alert.msg}}</alert>
+		<alert type="{{alert.type}}" class="signupalert" ng-repeat="alert in alerts" close="closeAlert()" dismiss-on-timeout="1000" ng-show="error">{{alert.msg}}</alert>
 		<p>
 			<input ng-model="username" type="text" placeholder="Username" required/>
 		</p>

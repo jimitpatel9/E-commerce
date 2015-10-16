@@ -1,15 +1,25 @@
 <div class="login">
-	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
-	<form>
-		<p>
-			<input ng-model="username" type="text" placeholder="Username" required/>
-		</p>
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.png"></span>
+	<form  class="userdetails" name="form">
+		<div class="checking">
+			<p>
+				<input ng-model="username" name="name" type="text" placeholder="Username" usercheck required/>
+				<span ng-show="form.name.$pending.uname" class="check-in-process">Checking<img src="images/loader.gif" alt=""/></span>
+				<span ng-show="form.name.$error.uname" class="already-exist">Already Exist</span>
+			</p>
+		</div>
 		<p>
 			<input ng-model="password" type="password" placeholder="Password" required/>
 		</p>
-		<p>
-			<input ng-model="email" type="email" placeholder="user@domain" required/>
-		</p>
+
+			<p>
+				<input ng-model="email" type="email"  placeholder="user@domain" required  />
+
+
+
+			</p>
+
+
 		<div class="loginSignup">
 			<button class="btn btn-info" ng-click="addUserData()">Submit</button>
 			<button class="btn btn-info" ui-sref="home.login">Cancel</button>

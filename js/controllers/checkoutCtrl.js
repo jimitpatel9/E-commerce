@@ -2,12 +2,12 @@
 	
 var app=angular.module('app');
 // body...
-var checkoutCtrl=function($scope,orderdata,$rootScope,$stateParams){
+var checkoutCtrl=function($scope){
 	
 };
 
 
 
-app.controller('checkoutCtrl',checkoutCtrl);
+app.controller('checkoutCtrl',['$scope',checkoutCtrl]);
 	
 })();

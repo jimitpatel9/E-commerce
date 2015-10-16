@@ -10,7 +10,7 @@
 	      </button>
 	      <a class="navbar-brand" href="#">
 	        <!-- your branding here -->
-	        <img ng-src="images/logo.jpg" ui-sref="home.login" class="logo"><span>E-Shop</span>
+	        <img ng-src="images/logo.png" ui-sref="home.login" class="logo"><span>E-Shop</span>
 	        <div class="clear"></div>
 	      </a>
 	    </div>
@@ -42,7 +42,7 @@
 
 <ul class="itemList" >
 	<li ng-repeat="item in itemList | productFilter:searchText" ng-click="productDetails(item.pid)">
-		<img ng-src="{{item.imageUrl}}"/>
+		<img ng-src="{{item.imageUrl[0]}}"/>
 		<h4>{{item.name}}</h4>
 		<div class="table-responsive">
 			<table class="table">

@@ -2,7 +2,7 @@
 	
 var app=angular.module('app');
 // body...
-var loginCtrl=function($scope,userdata,$state){
+var loginCtrl=function($scope,userdata,$state,$rootScope){
 
 	//user data from the mocke2e
 
@@ -10,7 +10,7 @@ var loginCtrl=function($scope,userdata,$state){
 	userdata.query(function(data){
     	userinfo=data;	
     });
-
+	$scope.foo='foo';
     //alert if the user sign-up
 
 	$scope.alerts = [{ 
@@ -23,9 +23,9 @@ var loginCtrl=function($scope,userdata,$state){
  	};
 
 	//validate the login info
-	
+
 	$scope.validateLogin=function(){
-		var tracker=false;
+		$scope.tracker=false;
 		for(var i=0;i<userinfo.length;i++){
 			if(userinfo[i].username===$scope.username && 
 				userinfo[i].password===$scope.password){
@@ -47,6 +47,6 @@ var loginCtrl=function($scope,userdata,$state){
 
 
 app.controller('loginCtrl',
-	["$scope","userdata","$state",loginCtrl]);
+	["$scope","userdata","$state","$rootScope",loginCtrl]);
 	
 })();

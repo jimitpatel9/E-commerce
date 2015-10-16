@@ -1,0 +1,30 @@
+{
+  "name": "bower",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jimitpatel9/jimitpatel9.github.io",
+  "authors": [
+    "JIMIT PATEL <jdp59@njit.edu>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "angular-carousel": "~0.3.13",
+    "angular-mocks": "~1.4.5",
+    "angular-resource": "~1.4.5",
+    "angular-route": "~1.4.6",
+    "angular-ui-bootstrap": "~0.13.4",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "AngularJS": "angular-latest#~1.4.5",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0",
+    "jquery": "~2.1.4"
+  }
+}

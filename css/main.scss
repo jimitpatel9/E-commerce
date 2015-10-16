@@ -2,6 +2,8 @@
 /*End Mixins*/
 /*Variables*/
 $blue-color: #0B0B48;
+$greaterthen-Tablet:768px;
+$mobile:449px;
 /*End Variables*/
 
 /*General Classess*/
@@ -11,11 +13,26 @@ $blue-color: #0B0B48;
 /*End General Classess*/
 body{
 	background-color: $blue-color;
+
+}
+.container{
 	width: 450px;
-	margin: 0 auto;
+  	margin: 0 auto;
+	padding: 0px;
+	@media screen and (min-width: $greaterthen-Tablet) {
+    	width: 750px; 
+  	}
+  	@media screen and (max-width: $mobile) {
+    	width: 300px; 
+  	}
 }
 /*Login Page CSS*/
 .login{
+  .signupalert{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom:10px;
+  }
 	p{
 		text-align: center;
 		input[type=text],input[type=password],input{
@@ -38,12 +55,36 @@ body{
 		text-align: center;
 	}
 }
+//Userdetails page
+.userdetails{
+	.checking{
+	  position: relative;
+	  .check-in-process{
+		position: absolute;
+		top:0px;
+		right:10%;
+		color:green;
+
+		img	{
+		  display: inline-block;
+		  width: 40px;
+		}
+
+	  }
+	  .already-exist{
+		position: absolute;
+		color: red;
+		top:10px;
+		right:13%;
+	  }
+	}
+}
 //ItemList Page Header
 nav{
 	border: none !important;
+
 	.navbar-brand {
 	    float: left;
-	    height: 50px;
 	    padding: 0;
 	    font-size: 18px;
 	    line-height: 20px;
@@ -55,12 +96,13 @@ nav{
 		span{
 			display: inline-block;
 			margin: 0;
-			color: white;
+			color: #00C9FB;
 		}
 	}
 	.navbar-header{
 		background-color: $blue-color;
 		border: none;
+		
 	}
 	.navbar-collapse{
 		background-color: $blue-color; 
@@ -70,25 +112,34 @@ nav{
 			color: white !important;
 		}
 	}
+	@media (min-width: 768px){
+	   .navbar-nav{
+	   		float: left;
+	    	margin: 10px;
+	   	} 
+	}
 	
 }
 .logo{
 		display: block;
-		width: 50px;
-		height: 50px;
-		padding: 10px;
+		width: 70px;
+		padding: 5px;
 		margin: 10px auto;
 		img{
-			width: 50px;
+			width: 70px;
 		}
 	}
 //Header for itemList page
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: transparent !important;
-
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #00C9FB;
 }
 .navbar-default .navbar-toggle {
     border-color: transparent !important;
+	margin-top:18px;    	
+	
 }
 .header{
 	color: white;
@@ -125,6 +176,9 @@ nav{
 .glyphicon-star{
 	color: yellow;
 }
+.glyphicon-star-empty:before {
+    content: "";
+}
 .itemList{
 	display: block;
 	width: 100%;
@@ -133,33 +187,43 @@ nav{
 	li{
 		display: block;
 	    float: left;
-	    width: 200px;
+	    width: 220px;
 	    color: white;
 	    padding: 5px;
 	    margin-top: 30px;
 	    text-align: center;
 		img{
 			width: 100%;
-			height: 150px;
+			height: 220px;
 		}
 		input[type=number]{
 			color: black;
 			width: 50px;
 			padding: 0px 5px;
 		}
-		text-align:center;
+		@media screen and (min-width: $greaterthen-Tablet) {
+		    width: 230px;
+		    margin-left: 15px;
+		}
+		@media screen and(max-width: ($greaterthen-Tablet)-1){
+			li:nth-child(2n+2){
+				margin-left: 7px;
+			}
+		}
+		@media screen and (max-width: $mobile) {
+	    	margin-left:25px;
+	    	width:250px; 
+	  	}
 	}
-	li:nth-child(2n+2){
-		margin-left: 7px;
-	}
+	.table-responsive{
+		border: none !important;
+		th {
+	    	border: none !important;
+		}
+	}	
 }
 //Table Css
-.table-responsive{
-		border: none;
-		th{
-			border: none !important;
-		}
-	}
+
 .form-control{
 	border-radius: 20px;
 }
@@ -184,11 +248,27 @@ nav{
 			}
 		}
 		.panel-body{
-			img{
-				display: block;
-				width: 100%;
-				padding-bottom: 10px;
+		  .carousel{
+			height: 360px;
+			.carousel-indicators li{
+			  border: 1px solid #000;
 			}
+			.carousel-indicators .active{
+			  background-color: #000000;
+			}
+			.carousel-inner{
+			  height: 100%;
+			  div.item.text-center.ng-isolate-scope.active,.ng-animate{
+				height: 100%;
+			  }
+			  img{
+				height: 100%;
+				width: 80%;
+				margin: 0 auto;
+			  }
+			}
+		  }
+
 		}
 	}
 }

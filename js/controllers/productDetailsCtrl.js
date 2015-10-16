@@ -1,6 +1,6 @@
 (function() {
 	
-var app=angular.module('app');
+var app = angular.module('app');
 // body...
 var productDetailsCtrl=function($scope,$stateParams,product){
 	$scope.user=$stateParams.username;
@@ -10,6 +10,10 @@ var productDetailsCtrl=function($scope,$stateParams,product){
 	//Ratings
 	$scope.max=5;
     $scope.isReadonly=true;
+	//carousel info
+	$scope.myInterval=2000;
+	$scope.noWrapSlides=false;
+
 };
 
 

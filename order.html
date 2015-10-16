@@ -1,5 +1,5 @@
 <div class="orderlist">
-	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.jpg"></span>
+	<span class="logo" ui-sref="home.login"><img ng-src="images/logo.png"></span>
 	<div class="table-responsive addedList">
 		<table class="table table-condensed">
 			<thead>
@@ -11,10 +11,10 @@
 				</tr>
 			</thead>
 			<tr class="active" ng-repeat="item in cartItemList.cartItem">
-				<th><span><img ng-src="{{item.imageUrl}}"></span></th>
+				<th><span><img ng-src="{{item.imageUrl[0]}}"></span></th>
 				<th><p>{{item.qty}}<p></th>
 				<th><p>${{item.qty * item.ourprice}}<p></th>
-				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem(index)" style="cursor:pointer"></i></th>
+				<th><i class="glyphicon glyphicon-remove" ng-click="removeAnItem($index)" style="cursor:pointer"></i></th>
 			</tr>
 			<tr class="active">
 				<th>Total</th>

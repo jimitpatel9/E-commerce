@@ -17,6 +17,7 @@ var orderCtrl=function($scope,orderdata,$rootScope,$stateParams){
 		$scope.totalPrice=0;
 	}
 	$scope.removeAnItem=function(index){
+		console.log(index);
 		$scope.cartItemList.cartItem.splice(index,1);
 		$scope.totalQty=0;
 		$scope.totalPrice=0;

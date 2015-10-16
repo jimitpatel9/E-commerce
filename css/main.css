@@ -8,11 +8,25 @@
 
 /*End General Classess*/
 body {
-  background-color: #0B0B48;
+  background-color: #0B0B48; }
+
+.container {
   width: 450px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0px; }
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media screen and (max-width: 449px) {
+    .container {
+      width: 300px; } }
 
 /*Login Page CSS*/
+.login .signupalert {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+
 .login p {
   text-align: center; }
   .login p input[type=text], .login p input[type=password], .login p input {
@@ -21,20 +35,37 @@ body {
     width: 80%;
     height: 40px;
     border-radius: 5px; }
+
 .login .loginSignup {
   text-align: center; }
   .login .loginSignup button {
     width: 100px;
     margin-left: 10px; }
+
 .login .ng-scope {
   display: block;
   text-align: center; }
+
+.userdetails .checking {
+  position: relative; }
+  .userdetails .checking .check-in-process {
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    color: green; }
+    .userdetails .checking .check-in-process img {
+      display: inline-block;
+      width: 40px; }
+  .userdetails .checking .already-exist {
+    position: absolute;
+    color: red;
+    top: 10px;
+    right: 13%; }
 
 nav {
   border: none !important; }
   nav .navbar-brand {
     float: left;
-    height: 50px;
     padding: 0;
     font-size: 18px;
     line-height: 20px;
@@ -45,7 +76,7 @@ nav {
     nav .navbar-brand span {
       display: inline-block;
       margin: 0;
-      color: white; }
+      color: #00C9FB; }
   nav .navbar-header {
     background-color: #0B0B48;
     border: none; }
@@ -55,21 +86,28 @@ nav {
     text-align: right; }
     nav .navbar-collapse a {
       color: white !important; }
+  @media (min-width: 768px) {
+    nav .navbar-nav {
+      float: left;
+      margin: 10px; } }
 
 .logo {
   display: block;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
+  width: 70px;
+  padding: 5px;
   margin: 10px auto; }
   .logo img {
-    width: 50px; }
+    width: 70px; }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent !important; }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #00C9FB; }
+
 .navbar-default .navbar-toggle {
-  border-color: transparent !important; }
+  border-color: transparent !important;
+  margin-top: 18px; }
 
 .header {
   color: white; }
@@ -98,6 +136,9 @@ nav {
 .glyphicon-star {
   color: yellow; }
 
+.glyphicon-star-empty:before {
+  content: ""; }
+
 .itemList {
   display: block;
   width: 100%;
@@ -106,26 +147,33 @@ nav {
   .itemList li {
     display: block;
     float: left;
-    width: 200px;
+    width: 220px;
     color: white;
     padding: 5px;
     margin-top: 30px;
-    text-align: center;
     text-align: center; }
     .itemList li img {
       width: 100%;
-      height: 150px; }
+      height: 220px; }
     .itemList li input[type=number] {
       color: black;
       width: 50px;
       padding: 0px 5px; }
-  .itemList li:nth-child(2n+2) {
-    margin-left: 7px; }
-
-.table-responsive {
-  border: none; }
-  .table-responsive th {
+    @media screen and (min-width: 768px) {
+      .itemList li {
+        width: 230px;
+        margin-left: 15px; } }
+    @media screen and (max-width: 767px) {
+      .itemList li li:nth-child(2n+2) {
+        margin-left: 7px; } }
+    @media screen and (max-width: 449px) {
+      .itemList li {
+        margin-left: 25px;
+        width: 250px; } }
+  .itemList .table-responsive {
     border: none !important; }
+    .itemList .table-responsive th {
+      border: none !important; }
 
 .form-control {
   border-radius: 20px; }
@@ -144,10 +192,20 @@ nav {
       top: -7px;
       background-color: #0B0B48;
       border-color: #0B0B48; }
-  .productDetails .panel-primary .panel-body img {
-    display: block;
-    width: 100%;
-    padding-bottom: 10px; }
+  .productDetails .panel-primary .panel-body .carousel {
+    height: 360px; }
+    .productDetails .panel-primary .panel-body .carousel .carousel-indicators li {
+      border: 1px solid #000; }
+    .productDetails .panel-primary .panel-body .carousel .carousel-indicators .active {
+      background-color: #000000; }
+    .productDetails .panel-primary .panel-body .carousel .carousel-inner {
+      height: 100%; }
+      .productDetails .panel-primary .panel-body .carousel .carousel-inner div.item.text-center.ng-isolate-scope.active, .productDetails .panel-primary .panel-body .carousel .carousel-inner .ng-animate {
+        height: 100%; }
+      .productDetails .panel-primary .panel-body .carousel .carousel-inner img {
+        height: 100%;
+        width: 80%;
+        margin: 0 auto; }
 
 .orderlist th {
   width: 33%;
@@ -159,13 +217,13 @@ nav {
     width: 40px; }
     .orderlist th span img {
       width: 100%; }
+
 .orderlist button {
   width: 100%;
   margin-top: 20px; }
 
 .checkout p {
   color: white; }
+
 .checkout input {
   width: 100% !important; }
-
-/*# sourceMappingURL=main.css.map */
